@@ -1,0 +1,26 @@
+<h3 class="topcoat-list__header">Beacons</h3>
+<ul class="topcoat-list list">
+    <% if (beacons.length > 0) { %>
+    <% _.each(beacons, function(beacon) { %>
+    <li class="topcoat-list__item">
+        <a href="#beacons/<%= beacon.uuid %>">
+            <img src='img/ic_beacon.png'/> <!--TODO usar uma imagem diferente para cada distancia do sinal-->
+
+            <p><%= beacon.uuid %></p>
+
+            <p style="margin-left: 58px;margin-top: 4px">
+                <strong>Distance:</strong> <%= beacon.distance %><br/>
+                <strong>Major:</strong> <%= beacon.major %> | <strong>Minor:</strong> <%= beacon.minor %>
+            </p>
+            <span class="chevron"></span><span class="count"><%= beacon.accuracy.toFixed(2) + "m" %></span>
+        </a>
+    </li>
+    <% }); %>
+    <% } else { %>
+    <li class="topcoat-list__item">
+        <a href="#beacons">
+            <p>No Beacons found</p>
+        </a>
+    </li>
+    <% } %>
+</ul>

@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:37
+-keep class com.ogv.ios.hellobeacons.HelloBeacons { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.radiusnetworks.ibeacon.IBeaconIntentProcessor { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.radiusnetworks.ibeacon.service.IBeaconService { <init>(...); }
+
